@@ -1,0 +1,5 @@
+main: me.lrxh.client.Main
+name: Loader
+version: '1.0.0'
+author: lrxh
+load: POSTWORLD
