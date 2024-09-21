@@ -1,4 +1,4 @@
-package me.lrxh.client;
+package dev.lrxh.client;
 
 import lombok.Getter;
 

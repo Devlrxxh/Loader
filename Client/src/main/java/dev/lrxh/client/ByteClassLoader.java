@@ -1,4 +1,4 @@
-package me.lrxh.client;
+package dev.lrxh.client;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

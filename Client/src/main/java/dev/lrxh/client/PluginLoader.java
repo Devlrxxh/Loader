@@ -1,4 +1,4 @@
-package me.lrxh.client;
+package dev.lrxh.client;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -36,18 +36,19 @@ public class PluginLoader extends JavaPlugin {
 
     public void load() {
         try {
-            Plugin plugin = receivePluginPacket(new Socket("localhost", 7321));
-            System.out.println(plugin.getMainClass());
+            Plugin plugin = receivePluginPacket(new Socket("45.141.150.230", 7321));
 
             ByteClassLoader classLoader = new ByteClassLoader(plugin.getBytes());
             this.injectedPlugin = classLoader.loadClass(plugin.getMainClass(), false)
-                    .asSubclass(InjectedPlugin.class).newInstance();
+                    .asSubclass(InjectedPlugin.class).getDeclaredConstructor().newInstance();
 
             injectedPlugin.onEnable(get());
         } catch (Exception e) {
+            e.printStackTrace();
             getLogger().severe("Failed to load plugin. " + e.getMessage());
         }
     }
+
 
     public JavaPlugin get() {
         return instance == null ? new PluginLoader() : instance;

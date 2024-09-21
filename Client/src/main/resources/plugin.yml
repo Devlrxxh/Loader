@@ -1,4 +1,4 @@
-main: me.lrxh.client.PluginLoader
+main: dev.lrxh.client.PluginLoader
 name: Loader
 version: '1.0.0'
 author: lrxh

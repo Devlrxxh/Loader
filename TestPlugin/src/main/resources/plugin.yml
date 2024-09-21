@@ -1,5 +1,0 @@
-main: org.example.Main
-name: Loader
-version: '1.0.0'
-author: lrxh
-load: POSTWORLD
